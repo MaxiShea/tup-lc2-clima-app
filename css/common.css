@@ -37,18 +37,22 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--color-theme);
+    background: rgb(0,89,76);
+    background: linear-gradient(90deg, rgba(0,89,76,1) 0%,rgba(0,143,122,1) 100%);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px; 
 }
+
 
 nav>ul {
     display: flex;
     justify-content: space-between;
-    justify-content: center;
+    justify-content: center;    
 }
 
 nav li {
     flex:
-    0 0 auto;
+    0 0 auto;    
 }
 
 nav li a {
@@ -65,14 +69,16 @@ nav li.current-page a {
     color: var(--color-theme);
     background-color: var(--color-active);
     pointer-events: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;    
 }
 
-main {
-    margin-top: 120px;
+main {    
+    margin-top: 120px;   
     overflow: auto;
     padding: 16px;
     padding-bottom: 60px;
-    height: calc(100% - 120px);
+    height: calc(100% - 120px);    
 }
 
 h1 {
@@ -89,23 +95,24 @@ h1>img {
 h2 {
     color: var(--color-theme);
     margin: 16px 0;
-    text-align: center;
+    text-align: center; 
 }
 
 h3 {
     color: var(--color-theme);
-    margin: 8px 0;
+    margin: 8px 0;    
 }
 
 main section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;    
 }
 
 footer {
     position: fixed;
     bottom: 0px;
-    background: var(--color-theme);
+    background: rgb(0,89,76);
+    background: linear-gradient(90deg, rgba(0,89,76,1) 0%,rgba(0,143,122,1) 100%);
     width: 100%;
     text-align: center;
     padding-top: 10px;
@@ -117,7 +124,7 @@ footer p {
     color: white;
 }    
 main p {
-    margin-bottom: 16px;    
+    margin-bottom: 16px;
 }
 
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */

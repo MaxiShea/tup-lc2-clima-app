@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima App</title>
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="./css/pages/common.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/help.css">
     <link rel="shortcut icon" href="./img/clima.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <h1>
+            <img src="/img/clima.png" alt="">            
             <span>Clima App</span>
         </h1>
         <nav>
@@ -31,7 +33,7 @@
         <p>Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego
             seleccionar la Ciudad en cuestion desde la pagina <a href="index.html">Clima</a></p>
             <section>
-                <form action="">
+                <form action="" class="form-help">
                     <ul>
                     <li>
                     <label for="nombre">Nombre:</label>
@@ -46,8 +48,10 @@
                     <textarea name="mensaje" id="" cols="30" rows="10"></textarea>                         
                     </li>             
                     </ul>
+                    <div class="boton-help">
                     <button type="reset">Limpiar</button>
-                    <button>Enviar</button> 
+                    <button>Enviar</button>
+                    </div> 
                 </form>
 
             </section>
@@ -59,6 +63,7 @@
             </section>
         </section>
         <section id="section-weather-result">
+            <p>Ingrese un <b>Email</b> válido</p>
             <!-- Sección donde se debe mostrar el clima de la ciudad -->
         </section>
     </main>
