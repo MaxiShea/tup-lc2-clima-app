@@ -36,7 +36,7 @@ formulario.addEventListener('submit', (e) => {
             console.log(data)
             if (data.message === 'city not found') {
                 // console.log('ciudad no encontrada')
-                resultado.innerHTML = `<p class="danger">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>`
+                resultado.innerHTML = `<p class="danger">Error: La ciudad ingresada no se encuentra en la API o seprodujo un error al consultar</p>`
                 setTimeout(() => {
                     resultado.innerHTML = ''
                 }, 3000);

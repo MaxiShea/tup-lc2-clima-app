@@ -66,3 +66,7 @@ section form button {
     display: block;
     background-color: #dc3545;
 }
+
+.todoOk {
+    background-color: #28a745 !important;
+}

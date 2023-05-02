@@ -1,4 +1,6 @@
 const btn = document.getElementById('button');
+const name = document.getElementById('#name')
+const message = document.getElementById('#message')
 const email = document.querySelector('#email');
 const sectionHelpResult = document.querySelector('#section-help-result');
 
@@ -7,6 +9,7 @@ document.getElementById('form')
         event.preventDefault();
 
         btn.textContent = 'Enviando...'
+        
 
         const serviceID = 'default_service';
         const templateID = 'contact_form';
@@ -14,19 +17,20 @@ document.getElementById('form')
         const valido = Validacion()
         console.log(valido)
         console.log(email.value)
-        // console.log(valido)
 
         if (valido) {
             emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 btn.textContent = 'Enviar';
-                alert('Mensaje Enviado!');
+                sectionHelpResult.innerHTML = `<p class="todoOk">Mensaje Enviado</p>`     
+                form.reset();
+                setTimeout( () => {
+                    sectionHelpResult.innerHTML = ``
+                }, 3000)
             }, (err) => {
                 btn.textContent = 'Enviar';
                 alert(JSON.stringify(err));
-                form.resetform()
             });
-            form.resetform();
         } else {
             btn.textContent = 'Enviar';
             sectionHelpResult.innerHTML = `<p>Ingrese un Email valido</p>`
@@ -46,12 +50,4 @@ const Validacion = () => {
         // console.log('no incluye xx@xx')
         return false
     }
-}
-
-function resetform() {
-    serviceID = '';
-    templateID = '';
-
-    resetform();
-
 }

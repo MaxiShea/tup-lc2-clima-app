@@ -21,15 +21,15 @@ formCityList.addEventListener('submit', (e) => {
         .then(data => {            
             console.log(data)            
             sectionWeatherResult.innerHTML = `<div class="card">
-            <h3>${data.name}</h3>
-            <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">            
+            <h3>${ciudad}</h3>
+            <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="" style="
+            filter: drop-shadow(1px 0px 5px #000);">
             <p>Temperatura: ${data.main.temp}º</p>
             <p>Sensación Térmica: ${data.main.feels_like}º</p>
             <p>Humedad: ${data.main.humidity}%</p>
             <p>Velocidad de viento: ${data.main.pressure}km/h</p>
             <p>Presión: ${data.wind.speed} P</p>
-            </div>`
-            // alert(data.weather[0].icon)   
+        </div>`        
         })
 })
 
